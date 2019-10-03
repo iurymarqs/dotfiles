@@ -2,5 +2,28 @@
     name = Iury Carvalho
     email = iurymarqs@gmail.com
 
+[alias]
+    # Add
+    aa = add --all
+
+    # Remove
+    unstage = reset HEAD~
+    apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0 git rm --cached
+
+    # Commit
+    fix = commit -v --amend
+
+    # Status
+    st = status -s
+
+    # Log
+    l = log --oneline --no-merges
+    head = l -1
+    tree = log --pretty=oneline --graph --decorate --all
+
+    # History
+    # see history for a particular file
+    history = log --follow
+
 [github]
     user = iurymarqs
